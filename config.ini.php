@@ -12,6 +12,7 @@ charset       = "utf8"
 [General]
 salt          = "#SECRET_TOKEN"
 session_save_handler = dbtable
+trusted_hosts[] = "analytics.nyansa.com"
 
 [mail]
 transport     = ${MAIL_TRANSPORT}     ; 'smtp' or empty (default)
