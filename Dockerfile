@@ -27,6 +27,8 @@ RUN rm vendor/piwik/piwik/config/config.ini.php
 RUN rm -rf /tmp/cache
 RUN rm -rf /tmp/php-pack
 
+COPY /app/vendor/matomo/plugin-CustomDimensions/* /app/vendor/piwik/piwik/plugins/CustomDimensions
+
 RUN cd vendor/piwik/piwik/misc \
  && curl http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz > GeoLiteCity.dat.gz \
  && gunzip GeoLiteCity.dat.gz \
